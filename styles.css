@@ -1,0 +1,13 @@
+html {
+  font: sans-serif;
+}
+#root {
+  width: 60%;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#list {
+}
