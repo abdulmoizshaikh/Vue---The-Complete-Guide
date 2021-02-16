@@ -1,3 +1,6 @@
+// this is declarative approach we just have to declare what to do
+// where we declare results
+// instead of steps of getting there
 Vue.createApp({
   data: () => {
     return {
@@ -13,6 +16,7 @@ Vue.createApp({
   },
 }).mount("#app");
 
+//
 /* const input = document.getElementById("input");
 const btn = document.getElementById("addGoalBtn");
 const list = document.getElementById("list");
