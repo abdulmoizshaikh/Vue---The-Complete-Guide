@@ -8,20 +8,24 @@ const app = Vue.createApp({
   },
   methods: {
     boxSelected(boxId) {
-      console.log("boxId", boxId);
       switch (boxId) {
         case "A":
-          this.boxASelected = true;
+          this.boxASelected = !this.boxASelected;
           break;
         case "B":
-          this.boxBSelected = true;
+          this.boxBSelected = !this.boxBSelected;
           break;
         case "C":
-          this.boxCSelected = true;
+          this.boxCSelected = !this.boxCSelected;
           break;
         default:
           break;
       }
+    },
+  },
+  computed: {
+    boxAClasses() {
+      return { active: this.boxASelected };
     },
   },
 });
