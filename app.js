@@ -4,7 +4,49 @@ const app = Vue.createApp({
   data() {
     return {
       counter: 0,
+      name: "",
+      confirmName: "",
+      completeName: "",
     };
+  },
+  watch: {
+    number(newVal, oldVal) {
+      alert("number changed");
+    },
+  },
+  computed: {
+    number() {
+      return this.name + " " + "lastname";
+    },
+  },
+
+  methods: {
+    add(num) {
+      this.counter += num;
+    },
+    subtract(num) {
+      this.counter -= num;
+    },
+    outputFullName() {
+      console.log("outputFullName");
+      if (this.name === "") {
+        return "";
+      }
+      return this.name + " " + "Shah";
+    },
+    // setName(event, surname) {
+    //   // this.name = event.target.value + surname;
+    //   this.name = event.target.value;
+    // },
+    submitForm(event) {
+      alert("submit");
+    },
+    confirmInput() {
+      this.confirmName = this.name;
+    },
+    resetInput() {
+      this.name = "";
+    },
   },
 });
 

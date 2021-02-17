@@ -20,9 +20,31 @@
 
   <section id="events">
     <h2>Events in Action</h2>
-    <button v-on:click="counter++">Add</button>
-    <button v-on:click="counter--">Remove</button>
+    <!-- both syntax are allowed in Vue js -->
+    <button v-on:click.left="add(5)">Add 5</button>
+    <button v-on:click.middle="subtract(5)">Remove by middle btn 5</button>
+    <p v-once>Starting Counter: {{ counter }}</p>
     <p>Result: {{ counter }}</p>
+
+    <!-- <input type="text" v-on:input="setName($event,'Khan')" v-on:keyup.enter="confirmInput" v-bind:value="name" /> -->
+    <!-- above code line replaced with below line -->
+    <input type="text" v-model="name" v-on:keyup.enter="confirmInput" />
+    <p>Your name : {{ name }}</p>
+    <!-- <p>{{outputFullName()}}</p> //not recommended -->
+    <!-- <p>{{name + " " + "Shah"}} </p> -->
+    <!-- computed property -->
+    <p>computed property : {{fullname}} {{number}}</p>
+    <!-- watchers -->
+    <p>watchers: {{completeName}} </p>
+
+
+    <p>Your confirm name : {{ confirmName }}</p>
+    <button v-on:click="resetInput">Reset input</button>
+
+    <form v-on:submit.prevent="submitForm">
+      <input type="text" />
+      <button>Sign Up</button>
+    </form>
   </section>
 
   <!-- basics-01-starting-code -->
@@ -32,14 +54,14 @@
     <h1>Vue Course Goals</h1>
   </header>
 
-  <section id="user-goal">
+  <section id=" user-goal">
     <h2>{{courseGoal}}</h2>
     <p>{{outputGoal()}}</p>
     <p>Learn more <a v-bind:href="vueLink">about Vue</a></p>
     <p v-html="courseGoalC"></p>
     <p v-html="outputGoal()"></p>
   </section>
- -->
+  -->
 
 
 </body>
