@@ -1,4 +1,17 @@
+// <!-- 02 understand event binding -->
+
 const app = Vue.createApp({
+  data() {
+    return {
+      counter: 0,
+    };
+  },
+});
+
+app.mount("#events");
+
+// <!-- basics-01-starting-code -->
+/* const app = Vue.createApp({
   //  here data is function
   data() {
     return {
@@ -23,3 +36,4 @@ const app = Vue.createApp({
 });
 
 app.mount("#user-goal"); //to establish connection of Vue to html page
+ */

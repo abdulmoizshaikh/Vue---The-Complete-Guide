@@ -12,9 +12,26 @@
 </head>
 
 <body>
+
+  <!-- 02 understand event binding -->
+  <header>
+    <h1>Vue Events</h1>
+  </header>
+
+  <section id="events">
+    <h2>Events in Action</h2>
+    <button v-on:click="counter++">Add</button>
+    <button v-on:click="counter--">Remove</button>
+    <p>Result: {{ counter }}</p>
+  </section>
+
+  <!-- basics-01-starting-code -->
+
+  <!--  
   <header>
     <h1>Vue Course Goals</h1>
   </header>
+
   <section id="user-goal">
     <h2>{{courseGoal}}</h2>
     <p>{{outputGoal()}}</p>
@@ -22,6 +39,9 @@
     <p v-html="courseGoalC"></p>
     <p v-html="outputGoal()"></p>
   </section>
+ -->
+
+
 </body>
 
 </html>
